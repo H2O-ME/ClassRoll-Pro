@@ -1,0 +1,13 @@
+{
+    "name": "ClassRoll Pro",
+    "description": "ClassRoll Pro",
+    "version": "1.2",
+    "plugin_ver": 4,
+    "author": "THW",
+    "settings": true,
+
+    "url": "https://github.com/H2O-ME/ClassRoll-Pro",
+    "branch": "main",
+
+    "update_date": "2024/2/5"
+}
