@@ -136,10 +136,10 @@
             </item>
             <item>
              <widget class="PrimaryPushButton" name="open_names_list">
-              <property name="text">
+                <property name="text">
                <string>打开名单列表</string>
-              </property>
-             </widget>
+                </property>
+               </widget>
             </item>
            </layout>
           </widget>

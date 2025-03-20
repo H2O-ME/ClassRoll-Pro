@@ -382,24 +382,26 @@ class Plugin(PluginBase):
         self.result_widget_code = "random_name_result"
         self.animation_timer = None
         self.animation_count = 0
-        self.animation_max = 15
+        self.animation_max = 8
         self.final_name = ""
         self.time_timer = None  # 用于时间更新的计时器
         self.showing_name = False  # 是否正在显示点名结果
         self.animation_active = False
-        
-    def execute(self):
-        """启动插件主功能，确保时间显示正常初始化"""
+        self.lock_time_updates = False  # 添加全局锁定标志
+        self.init()
+
+    def init(self):
+        """初始化插件"""
         try:
             print("执行随机点名插件初始化...")
             
-            # 关闭现有计时器，防止重复
-            if hasattr(self, 'time_timer') and self.time_timer:
-                self.time_timer.stop()
+            # 清理所有已存在的计时器
+            self.__cleanup_timers()
             
-            # 重置状态变量
+            # 重置所有状态变量
             self.showing_name = False
             self.animation_active = False
+            self.lock_time_updates = False
             
             # 首先注册小组件
             self.method.register_widget(
@@ -434,29 +436,52 @@ class Plugin(PluginBase):
         except Exception as e:
             print(f"插件初始化错误: {e}")
     
-    def update_time_display(self):
-        """更新小组件显示当前时间，增强防冲突机制"""
-        # 如果正在显示点名结果或动画，不更新时间
-        if self.showing_name or getattr(self, 'animation_active', False):
-            return
+    def __cleanup_timers(self):
+        """清理所有计时器，防止多实例干扰"""
+        if hasattr(self, 'time_timer') and self.time_timer:
+            if self.time_timer.isActive():
+                self.time_timer.stop()
+            self.time_timer = None
         
+        if hasattr(self, 'animation_timer') and self.animation_timer:
+            if self.animation_timer.isActive():
+                self.animation_timer.stop()
+            self.animation_timer = None
+    
+    def update_time_display(self):
+        """更新小组件显示当前时间，加强防干扰机制"""
+        # 更严格的状态检查，防止在点名过程中更新时间
+        if self.showing_name or self.animation_active:
+            return
+            
+        # 如果正在执行动画，也不更新
+        if hasattr(self, 'animation_timer') and self.animation_timer and self.animation_timer.isActive():
+            return
+            
         try:
             # 获取当前小组件状态
             widget = self.method.get_widget(self.result_widget_code)
             if not widget:
                 return
-            
-            # 检查当前标题，如果是点名相关的不要更新
-            current_title = ''
+                
+            # 检查当前标题，严格过滤点名相关标题
             try:
                 current_title = widget.title()
+                current_content = widget.content()
+                
+                # 如果当前内容不是时间格式 (00:00:00)，可能是点名内容，不要更新
+                if current_title != "当前时间":
+                    return
+                    
+                # 如果当前在显示学生名字(非时间格式)，也不更新
+                time_format = r'\d{2}:\d{2}:\d{2}'
+                import re
+                if not re.match(time_format, current_content):
+                    return
             except:
                 pass
-            
-            if current_title == "点名中..." or current_title == "点名结果":
-                return
-            
-            # 更新时间
+                
+            # 安全地更新时间
             current_time = datetime.now().strftime("%H:%M:%S")
             self.method.change_widget_content(
                 widget_code=self.result_widget_code,
@@ -465,21 +490,37 @@ class Plugin(PluginBase):
             )
         except Exception as e:
             print(f"时间更新错误: {e}")
-        
+    
     def show_name_in_widget(self, name):
         """在小组件中显示点名结果"""
+        self.lock_time_updates = True  # 立即锁定时间更新
+        if hasattr(self, 'time_timer') and self.time_timer:
+            self.time_timer.stop()
+            
         self.final_name = name
         self.showing_name = True  # 标记正在显示点名结果
+        self.animation_active = True  # 确保设置动画状态
         
         # 开始动画效果
         self.start_name_animation()
     
     def start_name_animation(self):
-        """开始名字切换动画，添加更严格的状态控制"""
+        """开始名字切换动画，强化状态控制"""
         try:
-            # 设置动画活动状态
+            # 双重保险：再次确保时间计时器停止
+            if hasattr(self, 'time_timer') and self.time_timer and self.time_timer.isActive():
+                self.time_timer.stop()
+                
+            # 设置全局标志变量
             self.animation_active = True
             self.showing_name = True
+            
+            # 显式强制更新状态
+            self.method.change_widget_content(
+                widget_code=self.result_widget_code,
+                title="点名准备中...",
+                content="请稍候..."
+            )
             
             names = self.floating_window.names
             if not names:
@@ -493,10 +534,6 @@ class Plugin(PluginBase):
                 return
             
             self.animation_count = 0
-            
-            # 确保停止所有其他计时器
-            if hasattr(self, 'time_timer') and self.time_timer and self.time_timer.isActive():
-                self.time_timer.stop()
             
             # 清理已有的动画计时器
             if self.animation_timer:
@@ -512,7 +549,11 @@ class Plugin(PluginBase):
             self.reset_to_time_display()
     
     def update_animation(self):
-        """更新动画显示"""
+        """更新动画显示，保持状态变量正确"""
+        # 重申状态，防止被其他方法改变
+        self.showing_name = True
+        self.animation_active = True
+        
         if self.animation_count < self.animation_max:
             # 随机显示一个名字
             temp_name = random.choice(self.floating_window.names)
@@ -574,10 +615,21 @@ class Plugin(PluginBase):
             )
         except Exception as e:
             print(f"重置时间显示时出错: {e}")
+        self.lock_time_updates = False  # 解除锁定
 
     def update(self, cw_contexts):
         """增强的状态更新函数，确保小组件在各种情况下都能正常显示"""
         super().update(cw_contexts)
+        
+        # 如果时间更新被锁定，确保时间计时器停止
+        if self.lock_time_updates and hasattr(self, 'time_timer') and self.time_timer and self.time_timer.isActive():
+            self.time_timer.stop()
+        
+        # 如果显示名字或动画活跃，锁定时间更新
+        if self.showing_name or self.animation_active:
+            self.lock_time_updates = True
+        else:
+            self.lock_time_updates = False
         
         try:
             # 先检查小组件是否存在，不存在则重新注册
