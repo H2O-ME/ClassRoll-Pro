@@ -81,7 +81,7 @@ ClassRoll Pro 是一个在Class Widgets上运行的的课堂随机点名插件�
 2. 直接编辑 `names.txt` 文件，修改名字后的概率数字
 3. 保存文件后，系统会自动重新加载名单
 
-## 📄 软件源代码协议
+## 📄 软件许可协议
 
 本项目使用 [AFN-License 2.0](LICENSE) 授权。
 
