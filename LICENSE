@@ -1,277 +1,116 @@
-Eclipse Public License - v 2.0
+AFN-License 2.0
+版本 2.0 | 版权 © 2025 THW
 
-    THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE
-    PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION
-    OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+引言：本许可旨在保护作者对软件的著作权，并规范其使用、复制、修改和分发，同时与中华人民共和国的法律法规，特别是《计算机软件保护条例》的精神和要求相符。
 
-1. DEFINITIONS
+1. 定义
+为本许可之目的，以下术语具有如下含义：
 
-"Contribution" means:
+“软件”：指根据本许可发布的原始代码、可执行文件及相关文档。本许可中所称的“软件”，在符合本许可定义的同时，亦应理解为符合《中华人民共和国计算机软件保护条例》第二条所界定的“计算机程序及其有关文档”的含义。
+“作者”：指本软件的原始创作者THW。
+“您”或“使用者”：指接受并遵守本许可条款的个人或实体。
+“关联实体”：指直接或间接控制您、受您控制或与您共同控制的任何实体，其中“控制”指拥有直接或间接拥有发行在外投票股份、股权或证券的50%以上，或以其他方式拥有指导或促使指导该实体管理和政策的权力。
+“分发”：指向第三方提供本软件的任何行为，包括但不限于发布、传输、下载、安装、使之可访问等。
+“衍生作品”：指基于本软件进行修改、翻译、扩展或与其他作品结合所形成的新型作品，其内容中应包含本软件的可识别源代码或可运行逻辑模块。
+“直接销售”：指以任何形式对本软件或其衍生作品的直接获取行为收取费用，无论其名义如何。这包括但不限于：
+销售许可或副本：直接销售软件的安装包、许可密钥、激活码、解密密钥，或通过付费下载、付费访问等方式提供软件副本。
+实质性收费捆绑：将本软件或其衍生作品作为主要价值组成部分，与价格虚高的非软件商品或服务捆绑销售，或收取显著高于软件获取、存储或传输成本的费用。
+订阅模式：若订阅服务的主要价值在于获取软件本身及其常规更新、或解除核心功能限制，而非持续性的增值服务，则视为直接销售。
+功能拆分变相收费：将软件的核心功能拆分，并对其中任何部分收取费用以获取或使用。
+兜底条款：若用户主要通过支付费用获取本软件或其核心功能，则无论名义如何，均视为直接销售。判断“主要通过支付费用”时，将综合考虑费用占比、用户获取软件的直接目的及交易实质。本条款旨在禁止以软件本身（而非基于软件提供的服务）为主要交易标的物进行盈利。
+“增值服务”：指基于本软件提供的技术支持、托管运维、定制开发、数据处理、或通过远程网络服务（如SaaS）提供本软件功能等附加服务。其收费主要体现为服务成本、人力投入或额外资源消耗，而非软件本身的授权或副本获取费用。通过远程网络服务（如SaaS）提供基于本软件或其衍生作品的功能，并对此服务收费，不视为本协议第3.1条所禁止的“直接销售”行为，前提是用户可免费获取软件的基础版本。
 
-  a) in the case of the initial Contributor, the initial content
-     Distributed under this Agreement, and
+2. 权利授予
+在遵守本许可所有条款的前提下，您被授予以下权利：
 
-  b) in the case of each subsequent Contributor:
-     i) changes to the Program, and
-     ii) additions to the Program;
-  where such changes and/or additions to the Program originate from
-  and are Distributed by that particular Contributor. A Contribution
-  "originates" from a Contributor if it was added to the Program by
-  such Contributor itself or anyone acting on such Contributor's behalf.
-  Contributions do not include changes or additions to the Program that
-  are not Modified Works.
+无限制地使用、复制、修改本软件，包括用于商业用途。
+创建闭源的衍生作品。
+将本软件的代码部分或全部用于其他项目，包括商业闭源项目。
+分发本软件的原始或修改版本，但须遵守第3条限制。
 
-"Contributor" means any person or entity that Distributes the Program.
+3. 核心限制
 
-"Licensed Patents" mean patent claims licensable by a Contributor which
-are necessarily infringed by the use or sale of its Contribution alone
-or when combined with the Program.
+3.1 禁止直接销售
+您不得以任何形式对本软件或其衍生作品的直接获取行为收取费用，即禁止“直接销售”。
 
-"Program" means the Contributions Distributed in accordance with this
-Agreement.
+例外：允许通过增值服务（如SaaS、硬件集成）盈利。即使该服务使用了本软件的衍生作品，只要用户可免费获取软件的基础版本，且收费不涉及对软件副本的直接销售，则不视为违反本条款。
 
-"Recipient" means anyone who receives the Program under this Agreement
-or any Secondary License (as applicable), including Contributors.
+3.2 署名要求
+您在分发本软件或在其他项目中使用本软件部分代码时，必须在显著位置保留原作者署名。
 
-"Derivative Works" shall mean any work, whether in Source Code or other
-form, that is based on (or derived from) the Program and for which the
-editorial revisions, annotations, elaborations, or other modifications
-represent, as a whole, an original work of authorship.
+优先要求在以下显著位置保留署名：
 
-"Modified Works" shall mean any work in Source Code or other form that
-results from an addition to, deletion from, or modification of the
-contents of the Program, including, for purposes of clarity any new file
-in Source Code form that contains any contents of the Program. Modified
-Works shall not include works that contain only declarations,
-interfaces, types, classes, structures, or files of the Program solely
-in each case in order to link to, bind by name, or subclass the Program
-or Modified Works thereof.
+图形界面：主界面“关于”页或设置页。
+命令行工具：--version 或 --help 输出。
+项目根目录：LICENSE、NOTICE 或 ATTRIBUTION.md 文件。
+对于源代码文件：若您对软件进行了实质性修改并分发该修改后的源代码文件，建议在该文件头部注释中保留署名，或在项目根目录下的ATTRIBUTION.md文件中清晰列出。
 
-"Distribute" means the acts of a) distributing or b) making available
-in any manner that enables the transfer of a copy.
+“实质性修改”指对软件的功能、逻辑或架构进行了显著的增加、删除或变更，而非仅限于格式调整、注释添加、变量重命名、或不影响核心功能的微小错误修复。
 
-"Source Code" means the form of a Program preferred for making
-modifications, including but not limited to software source code,
-documentation source, and configuration files.
+技术限制时：如在二进制分发、嵌入式系统或特定软件包元数据中，应改用安装包元数据或项目根目录下的ATTRIBUTION.md文件。
 
-"Secondary License" means either the GNU General Public License,
-Version 2.0, or any later versions of that license, including any
-exceptions or additional permissions as identified by the initial
-Contributor.
+署名应包含以下信息：
 
-2. GRANT OF RIGHTS
+原作者名称；
+软件名称；
+协议版本（AFN-License v2.0）；
+可选：项目主页或协议文本链接。
 
-  a) Subject to the terms of this Agreement, each Contributor hereby
-  grants Recipient a non-exclusive, worldwide, royalty-free copyright
-  license to reproduce, prepare Derivative Works of, publicly display,
-  publicly perform, Distribute and sublicense the Contribution of such
-  Contributor, if any, and such Derivative Works.
+示例：
 
-  b) Subject to the terms of this Agreement, each Contributor hereby
-  grants Recipient a non-exclusive, worldwide, royalty-free patent
-  license under Licensed Patents to make, use, sell, offer to sell,
-  import and otherwise transfer the Contribution of such Contributor,
-  if any, in Source Code or other form. This patent license shall
-  apply to the combination of the Contribution and the Program if, at
-  the time the Contribution is added by the Contributor, such addition
-  of the Contribution causes such combination to be covered by the
-  Licensed Patents. The patent license shall not apply to any other
-  combinations which include the Contribution. No hardware per se is
-  licensed hereunder.
+本软件包含 THW 开发的 AFN-Licensed 代码（v2.0）。
+项目主页：https://github.com/H2O-ME/ClassRoll-Pro
 
-  c) Recipient understands that although each Contributor grants the
-  licenses to its Contributions set forth herein, no assurances are
-  provided by any Contributor that the Program does not infringe the
-  patent or other intellectual property rights of any other entity.
-  Each Contributor disclaims any liability to Recipient for claims
-  brought by any other entity based on infringement of intellectual
-  property rights or otherwise. As a condition to exercising the
-  rights and licenses granted hereunder, each Recipient hereby
-  assumes sole responsibility to secure any other intellectual
-  property rights needed, if any. For example, if a third party
-  patent license is required to allow Recipient to Distribute the
-  Program, it is Recipient's responsibility to acquire that license
-  before distributing the Program.
+3.3 包含许可文本
+在分发本软件或包含本软件的项目时，必须完整包含本许可文本，或通过链接方式提供本许可副本。
 
-  d) Each Contributor represents that to its knowledge it has
-  sufficient copyright rights in its Contribution, if any, to grant
-  the copyright license set forth in this Agreement.
+4. 法律责任
 
-  e) Notwithstanding the terms of any Secondary License, no
-  Contributor makes additional grants to any Recipient (other than
-  those set forth in this Agreement) as a result of such Recipient's
-  receipt of the Program under the terms of a Secondary License
-  (if permitted under the terms of Section 3).
+4.1 免责声明
+本软件按“原样”提供，不作任何明示或暗示的保证。根据《中华人民共和国计算机软件保护条例》第六条的规定，本许可对软件著作权的保护不延及开发软件所用的思想、处理过程、操作方法或者数学概念等。作者不对以下情况承担责任：
 
-3. REQUIREMENTS
+本软件及衍生作品的安全性、合规性、知识产权问题；
+因使用或无法使用本软件而引起的直接、间接、附带、特殊、惩罚性或后果性损害；
+第三方对专利、商标、版权等主张的侵权责任。
 
-3.1 If a Contributor Distributes the Program in any form, then:
+在任何情况下，作者不对因使用或无法使用本软件而引起的任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权行为或其他方面，即使已被告知可能发生此类损害。
 
-  a) the Program must also be made available as Source Code, in
-  accordance with section 3.2, and the Contributor must accompany
-  the Program with a statement that the Source Code for the Program
-  is available under this Agreement, and informs Recipients how to
-  obtain it in a reasonable manner on or through a medium customarily
-  used for software exchange; and
+4.2 专利授权
+作者授予您非排他性的、全球性的、免版税的专利许可，该许可涵盖作者可授权的、本软件（包括其后续版本）中实际包含的、且作者拥有或有权许可的所有专利技术。此专利许可仅限于您使用、复制、修改、分发、许诺销售、销售、进口和以其他方式利用本软件及其衍生作品，以及任何您在合理使用本软件或其衍生作品时不可避免地会使用的、由本软件所包含的专利技术。此许可不涵盖您独立开发或从第三方获取的专利技术。
 
-  b) the Contributor may Distribute the Program under a license
-  different than this Agreement, provided that such license:
-     i) effectively disclaims on behalf of all other Contributors all
-     warranties and conditions, express and implied, including
-     warranties or conditions of title and non-infringement, and
-     implied warranties or conditions of merchantability and fitness
-     for a particular purpose;
+专利防御条款：若您或您的关联实体对作者或其贡献者（无论直接或间接）就与本软件或其衍生作品有关的专利技术提起专利诉讼（除非该诉讼是作者先对您发起的专利侵权诉讼），则本许可授予您的所有专利权利将立即终止。
 
-     ii) effectively excludes on behalf of all other Contributors all
-     liability for damages, including direct, indirect, special,
-     incidental and consequential damages, such as lost profits;
+重要提示：作者不声明本软件不侵犯任何第三方的专利、商标或版权，您在使用本软件时应自行承担所有相关风险。您理解并同意，作者不对本软件是否侵犯第三方专利负责，本专利许可不涵盖社区贡献者或第三方提供的专利技术，作者不对这些技术是否可授权作出任何声明。您在使用本软件时应自行进行专利检索和风险评估，尤其是在将本软件集成到商业产品中时。
 
-     iii) does not attempt to limit or alter the recipients' rights
-     in the Source Code under section 3.2; and
+5. 兼容性与终止
 
-     iv) requires any subsequent distribution of the Program by any
-     party to be under a license that satisfies the requirements
-     of this section 3.
+5.1 协议冲突处理
+若您将本软件或其衍生作品与GPL、AGPL等具有“传染性”条款的许可证代码结合，并在该结合作品构成该传染性许可证所定义的“衍生作品”或“修改版本”并进行分发时，则本许可中允许闭源分发的条款对该结合作品整体失效，该结合作品的许可和分发必须完全遵守传染性许可证的要求。此条款仅在分发时生效，不影响您在内部开发或使用该结合作品。
 
-3.2 When the Program is Distributed as Source Code:
+“结合”的定义：在本许可中，“结合”是指将本软件与传染性许可证代码通过静态链接、动态链接、紧密集成、共享内存或进程间通信等方式进行整合，且该整合行为在所涉传染性许可证下可能构成“衍生作品”或“修改版本”。您有责任根据所涉传染性许可证的具体条款判断是否构成其定义下的“衍生作品”或“修改版本”。
 
-  a) it must be made available under this Agreement, or if the
-  Program (i) is combined with other material in a separate file or
-  files made available under a Secondary License, and (ii) the initial
-  Contributor attached to the Source Code the notice described in
-  Exhibit A of this Agreement, then the Program may be made available
-  under the terms of such Secondary Licenses, and
+5.2 违约救济与终止
+若您违反本许可的任何条款，您的使用和分发权利将自动终止。
 
-  b) a copy of this Agreement must be included with each copy of
-  the Program.
+通知与纠正：作者将通过书面形式（如电子邮件）通知您违约行为。您应在收到通知后30日内纠正违约行为。若逾期未能纠正，您的权利将永久终止。
+故意侵权：若违约行为被认定为故意或恶意侵权，作者有权立即终止所有权利，且不提供纠正机会。
+“故意侵权”的判断标准：包括但不限于：在明知或应知的情况下违反核心限制（如直接销售），在收到违约通知后仍拒绝或拖延纠正，试图通过技术手段或虚假声明规避许可条款，或以欺诈方式获取或使用软件。作者保留根据违约行为的性质、频率及影响程度综合判断是否构成故意侵权的权利。
+已分发副本：对于已根据本许可有效分发的软件副本，其许可权利不受本条款终止的影响，即接收这些副本的第三方可以继续根据其获得的许可使用软件。
 
-3.3 Contributors may not remove or alter any copyright, patent,
-trademark, attribution notices, disclaimers of warranty, or limitations
-of liability ("notices") contained within the Program from any copy of
-the Program which they Distribute, provided that Contributors may add
-their own appropriate notices.
+6. 全球化条款
 
-4. COMMERCIAL DISTRIBUTION
+6.1 出口管制
+您承诺不将本软件用于受国际制裁的用途，包括但不限于美国《出口管理条例》（EAR）、欧盟第2580/2001号条例等规定的受限用途。您有责任确保您的使用、复制和分发行为符合所有适用的出口管制法律法规。
 
-Commercial distributors of software may accept certain responsibilities
-with respect to end users, business partners and the like. While this
-license is intended to facilitate the commercial use of the Program,
-the Contributor who includes the Program in a commercial product
-offering should do so in a manner which does not create potential
-liability for other Contributors. Therefore, if a Contributor includes
-the Program in a commercial product offering, such Contributor
-("Commercial Contributor") hereby agrees to defend and indemnify every
-other Contributor ("Indemnified Contributor") against any losses,
-damages and costs (collectively "Losses") arising from claims, lawsuits
-and other legal actions brought by a third party against the Indemnified
-Contributor to the extent caused by the acts or omissions of such
-Commercial Contributor in connection with its distribution of the Program
-in a commercial product offering. The obligations in this section do not
-apply to any claims or Losses relating to any actual or alleged
-intellectual property infringement. In order to qualify, an Indemnified
-Contributor must: a) promptly notify the Commercial Contributor in
-writing of such claim, and b) allow the Commercial Contributor to control,
-and cooperate with the Commercial Contributor in, the defense and any
-related settlement negotiations. The Indemnified Contributor may
-participate in any such claim at its own expense.
+6.2 数据保护
+若您将本软件用于涉及个人信息处理的场景，您应自行确保作为数据控制者或数据处理者，您的行为符合适用司法管辖区的数据保护法规，如欧盟《通用数据保护条例》（GDPR）、中国《网络安全法》等。本软件仅为工具，作者不作为您所处理数据的控制者或处理者，亦不对您因不遵守数据保护法规而产生的任何责任承担责任。若本软件本身具备处理个人数据的功能，请您在部署或集成该功能前进行合规性评估。处理个人数据的功能包括但不限于收集、存储、分析或传输用户身份信息、行为数据或其他受数据保护法规约束的信息。
 
-For example, a Contributor might include the Program in a commercial
-product offering, Product X. That Contributor is then a Commercial
-Contributor. If that Commercial Contributor then makes performance
-claims, or offers warranties related to Product X, those performance
-claims and warranties are such Commercial Contributor's responsibility
-alone. Under this section, the Commercial Contributor would have to
-defend claims against the other Contributors related to those performance
-claims and warranties, and if a court requires any other Contributor to
-pay any damages as a result, the Commercial Contributor must pay
-those damages.
+7. 协议终止
+本许可在您未能遵守任何条款时自动终止。作者保留决定是否恢复许可的权利（在第5.2条规定范围内）。
 
-5. NO WARRANTY
+协议终止后的影响：一旦本许可终止，您必须立即停止所有对本软件的进一步使用、复制、修改和分发行为，并停止使用并妥善处置所有在您控制或占有下的软件副本（不包括已根据本许可合法分发给第三方的副本）。“妥善处置”包括但不限于删除本地副本、撤销公开访问权限，并确保不再以任何形式分发或使用软件。对于已合法分发给第三方的副本，其许可效力不受影响。本协议中的免责声明和专利防御条款在协议终止后仍然有效。
 
-EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, AND TO THE EXTENT
-PERMITTED BY APPLICABLE LAW, THE PROGRAM IS PROVIDED ON AN "AS IS"
-BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR
-IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF
-TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR
-PURPOSE. Each Recipient is solely responsible for determining the
-appropriateness of using and distributing the Program and assumes all
-risks associated with its exercise of rights under this Agreement,
-including but not limited to the risks and costs of program errors,
-compliance with applicable laws, damage to or loss of data, programs
-or equipment, and unavailability or interruption of operations.
+8. 联系方式
+如有关于本许可的疑问、请求许可例外、报告违规行为、或讨论潜在合作与贡献，请通过以下方式联系作者：
 
-6. DISCLAIMER OF LIABILITY
-
-EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, AND TO THE EXTENT
-PERMITTED BY APPLICABLE LAW, NEITHER RECIPIENT NOR ANY CONTRIBUTORS
-SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION LOST
-PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
-EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGES.
-
-7. GENERAL
-
-If any provision of this Agreement is invalid or unenforceable under
-applicable law, it shall not affect the validity or enforceability of
-the remainder of the terms of this Agreement, and without further
-action by the parties hereto, such provision shall be reformed to the
-minimum extent necessary to make such provision valid and enforceable.
-
-If Recipient institutes patent litigation against any entity
-(including a cross-claim or counterclaim in a lawsuit) alleging that the
-Program itself (excluding combinations of the Program with other software
-or hardware) infringes such Recipient's patent(s), then such Recipient's
-rights granted under Section 2(b) shall terminate as of the date such
-litigation is filed.
-
-All Recipient's rights under this Agreement shall terminate if it
-fails to comply with any of the material terms or conditions of this
-Agreement and does not cure such failure in a reasonable period of
-time after becoming aware of such noncompliance. If all Recipient's
-rights under this Agreement terminate, Recipient agrees to cease use
-and distribution of the Program as soon as reasonably practicable.
-However, Recipient's obligations under this Agreement and any licenses
-granted by Recipient relating to the Program shall continue and survive.
-
-Everyone is permitted to copy and distribute copies of this Agreement,
-but in order to avoid inconsistency the Agreement is copyrighted and
-may only be modified in the following manner. The Agreement Steward
-reserves the right to publish new versions (including revisions) of
-this Agreement from time to time. No one other than the Agreement
-Steward has the right to modify this Agreement. The Eclipse Foundation
-is the initial Agreement Steward. The Eclipse Foundation may assign the
-responsibility to serve as the Agreement Steward to a suitable separate
-entity. Each new version of the Agreement will be given a distinguishing
-version number. The Program (including Contributions) may always be
-Distributed subject to the version of the Agreement under which it was
-received. In addition, after a new version of the Agreement is published,
-Contributor may elect to Distribute the Program (including its
-Contributions) under the new version.
-
-Except as expressly stated in Sections 2(a) and 2(b) above, Recipient
-receives no rights or licenses to the intellectual property of any
-Contributor under this Agreement, whether expressly, by implication,
-estoppel or otherwise. All rights in the Program not expressly granted
-under this Agreement are reserved. Nothing in this Agreement is intended
-to be enforceable by any entity that is not a Contributor or Recipient.
-No third-party beneficiary rights are created under this Agreement.
-
-Exhibit A - Form of Secondary Licenses Notice
-
-"This Source Code may also be made available under the following
-Secondary Licenses when the conditions for such availability set forth
-in the Eclipse Public License, v. 2.0 are satisfied: {name license(s),
-version(s), and exceptions or additional permissions here}."
-
-  Simply including a copy of this Agreement, including this Exhibit A
-  is not sufficient to license the Source Code under Secondary Licenses.
-
-  If it is not possible or desirable to put the notice in a particular
-  file, then You may include the notice in a location (such as a LICENSE
-  file in a relevant directory) where a recipient would be likely to
-  look for such a notice.
-
-  You may add additional accurate notices of copyright ownership.
+📧 thw@thw.lol
