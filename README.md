@@ -19,6 +19,7 @@ ClassRoll Pro 是一个功能强大的课堂随机点名系统，支持自定义
 ```
 .
 ├── ClassWidgets/          # 自定义UI组件
+│   └── base.py
 ├── names.txt             # 学生名单配置文件
 ├── plugin.json           # 插件配置文件
 ├── main.py               # 主程序入口
