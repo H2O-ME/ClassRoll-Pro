@@ -31,6 +31,7 @@ ClassRoll Pro 是一个在Class Widgets上运行的的课堂随机点名插件�
 
 ### 系统架构概述
 <img width="1680" height="800" alt="image" src="https://github.com/user-attachments/assets/39037b4d-67ec-4db2-ac8d-c3ce766c6104" />
+
 ### 核心组件交互
 <img width="1622" height="747" alt="image" src="https://github.com/user-attachments/assets/30f14f03-7a6d-4fad-a470-8996a5e882da" />
 
