@@ -1,7 +1,6 @@
 # ClassRoll Pro - 课堂点名插件
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
-![License](https://img.shields.io/badge/license-AFN--License%202.0-green.svg)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/H2O-ME/ClassRoll-Pro)
 
 ## 项目介绍
@@ -89,7 +88,7 @@ ClassRoll Pro 是一个在Class Widgets上运行的的课堂随机点名插件�
 
 ## 📄 软件许可协议
 
-本项目使用 [AFN-License 2.0](LICENSE) 授权。
+本项目使用 [MIT](LICENSE) 授权。
 
 ---
 
